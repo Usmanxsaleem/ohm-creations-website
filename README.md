@@ -23,13 +23,9 @@ assets/favicon.png
 assets/gallery/     portfolio images (from Behance)
 ```
 
-## Things to fill in before going live
+## Contact form
 
-Search `index.html` for `TODO`:
-
-1. **Contact form**: create a free form at https://formspree.io and replace `YOUR_FORM_ID` in the form `action`.
-2. **Email**: replace `hello@ohmcreations.com` with your real address.
-3. **Social links**: replace the `#` links for Instagram, LinkedIn, Facebook and X, or delete the ones you don't use.
+Right now the form opens the visitor's email app addressed to ohmcreations9@gmail.com. To receive messages directly instead, create a free form at https://formspree.io and replace `YOUR_FORM_ID` in the form `action`.
 
 ## Adding portfolio pieces
 

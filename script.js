@@ -150,8 +150,13 @@
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     if (form.action.includes("YOUR_FORM_ID")) {
-      status.className = "form__status err";
-      status.textContent = "The form isn't connected yet. Please email us directly for now.";
+      // No form backend yet: open the visitor's email app with the message filled in
+      const d = Object.fromEntries(new FormData(form));
+      const subject = `Project enquiry: ${d.service} (${d.name})`;
+      const body = `Name: ${d.name}\nEmail: ${d.email}\nService: ${d.service}\nBudget: ${d.budget || "Not sure yet"}\n\n${d.message}`;
+      window.location.href = `mailto:ohmcreations9@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      status.className = "form__status ok";
+      status.textContent = "Opening your email app. Just press send. You can also reach us on Discord or Instagram.";
       return;
     }
     const btn = $("button[type=submit]", form);
